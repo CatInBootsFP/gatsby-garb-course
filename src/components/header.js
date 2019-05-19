@@ -11,22 +11,53 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <span>
+        <h1 style={{ margin: 0 }}>
+          <Link to="/" className="navlink" activeClassName="active">
+            {siteTitle}
+          </Link>
+        </h1>
+      </span>
+      <Link to="/blog" className="navlink" activeClassName="active">
+        Blogue
+      </Link>
+      <Link to="/products" className="navlink" activeClassName="active">
+        Produits
+      </Link>
+      {/* Shopping Cart Summary */}
+      <div
+        style={{
+          color: "white",
+          cursor: "pointer",
+        }}
+        className="snipcart-summary snipcart-checkout"
+      >
+        <div>
+          <strong>Mon panier</strong>
+        </div>
+        <div>
+          <span
+            style={{ fontWeight: "bold" }}
+            className="snipcart-total-items"
+          />{" "}
+          articles au panier
+        </div>
+        <div>
+          Prix total:{" "}
+          <span
+            style={{ fontWeight: "bold" }}
+            className="snipcart-total-price"
+          />
+        </div>
+      </div>
     </div>
   </header>
 )
