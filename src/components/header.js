@@ -9,6 +9,18 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
+    <div style={{ color: "rebeccapurple" }}>
+      <p
+        style={{
+          textAlign: "center",
+          marginBottom: 0,
+          backgroundColor: "white",
+        }}
+      >
+        site de test - vous ne pouvez rien acheter ici! ----- testing site - you
+        can't buy anything here!
+      </p>
+    </div>
     <div
       style={{
         display: "flex",
